@@ -1,26 +1,26 @@
 * CÁC CÁCH SỬ DỤNG CSS:
 1. Internal
-    - Là cách CSS trong cặp thẻ style, và chúng ta có thể đặt cặp thẻ style đó ở bất kì vị trí nào ngoại trừ giữa thẻ head và body.
-    - Khuyến khích CSS trong thẻ head.
+- Là cách CSS trong cặp thẻ style, và chúng ta có thể đặt cặp thẻ style đó ở bất kì vị trí nào ngoại trừ giữa thẻ head và body.
+- Khuyến khích CSS trong thẻ head.
 2. External
-    - Là cách CSS ở ngoài file html, tức là chúng ta sẽ CSS ở trong một file CSS ở bên ngoài (có thể là trong cùng thư mục project hoặc ở trên mạng).
-    - Để sử dụng được CSS external chúng ta sẽ sử dụng một cặp thẻ link để dẫn tới file CSS đó.
-        vd: <link rel="stylesheet" href="#đường dẫn file CSS">
+- Là cách CSS ở ngoài file html, tức là chúng ta sẽ CSS ở trong một file CSS ở bên ngoài (có thể là trong cùng thư mục project hoặc ở trên mạng).
+- Để sử dụng được CSS external chúng ta sẽ sử dụng một cặp thẻ link để dẫn tới file CSS đó.
+    vd: <link rel="stylesheet" href="#đường dẫn file CSS">
 3. Inline
-    - Là cách CSS trong thuộc tính style trong thẻ mở của html.
+- Là cách CSS trong thuộc tính style trong thẻ mở của html.
 * Lưu ý chung các cách CSS:
-    - Khi kết thúc CSS một thuộc tính thì phải có dấu ";".
+- Khi kết thúc CSS một thuộc tính thì phải có dấu ";".
 
 * CÁC TRƯỜNG HỢP SỬ DỤNG
 1. External
-    - Trong thực tế hầu hết chúng ta sử dụng cách này. Viết CSS riêng ra một file giúp code được gọn gàng và tách bạch hơn. Giúp dễ dàng trong việc sử dụng
-        lại giữa nhiều trang khác nhau.
+- Trong thực tế hầu hết chúng ta sử dụng cách này. Viết CSS riêng ra một file giúp code được gọn gàng và tách bạch hơn. Giúp dễ dàng trong việc sử dụng
+    lại giữa nhiều trang khác nhau.
 2. Internal
-    - Có thể sử dụng trong trường hợp CSS cho một trang có style khác biệt hoàn toàn so với các trang còn lại. Bạn cần đủ kinh nghiệm để chắc chắn vào điều
-        đó, đôi khi có những thành phần tại thời điểm đó là duy nhất, nhưng trong tương lai nó sẽ được sử dụng ở mọi nơi.
-    - Khi một trang xuất hiện một thành phần chỉ sử dụng duy nhất trong trang này bạn cũng có thể sử dụng CSS internal. Tuy nhiên cũng cần nhiều kinh
-        nghiệm để có thể đánh giá một cách đúng đắn.
-    - Ngoài ra một số Tip để tối ưu tốc độ tải của website người ta cũng sử dụng CSS internal.
+- Có thể sử dụng trong trường hợp CSS cho một trang có style khác biệt hoàn toàn so với các trang còn lại. Bạn cần đủ kinh nghiệm để chắc chắn vào điều
+    đó, đôi khi có những thành phần tại thời điểm đó là duy nhất, nhưng trong tương lai nó sẽ được sử dụng ở mọi nơi.
+- Khi một trang xuất hiện một thành phần chỉ sử dụng duy nhất trong trang này bạn cũng có thể sử dụng CSS internal. Tuy nhiên cũng cần nhiều kinh
+    nghiệm để có thể đánh giá một cách đúng đắn.
+- Ngoài ra một số Tip để tối ưu tốc độ tải của website người ta cũng sử dụng CSS internal.
 3. Inline
 - Trường hợp sử dụng phổ biến nhất có lẽ là khi tạo email HTML, có khi nào bạn nhận được email quảng cáo với giao diện khá bắt mắt. Đó chính là những
     email HTML được sử dụng CSS inline. Tại sao email HTML lại sử dụng CSS inline? Đơn giản vì để đáp ứng được các tiêu chuẩn, các vấn đề bảo mật khi
