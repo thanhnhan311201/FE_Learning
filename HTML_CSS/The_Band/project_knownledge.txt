@@ -1,0 +1,12 @@
+* PHÂN TÍCH DỰ ÁN
+- Đây là trang one-page, kiểu trang như thế này thường được dùng để làm trang giới thiệu.
+
+* CÁC THÀNH PHẦN CHÍNH CỦA TRANG WEBSITE
+1. Header
+2. Slider
+3. Content:
+    - About
+    - Tour
+    - Contact
+    - Image
+4. Footer

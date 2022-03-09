@@ -1,0 +1,57 @@
+##### Table of Content
+
+1. [Các thẻ HTML thông dụng](#các-thẻ-html-thông-dụng)
+1. [Attribute trong HTML](#attribute-trong-html)
+
+
+# Những kiến thức HTML tổng hợp được trong khóa học **HTML, CSS từ Zero đến Hero**
+
+
+## Các thẻ HTML thông dụng
+
+### 1. h1 - h6
+- Thẻ heading hay còn gọi là thẻ tiêu đề, nó có nhiệm vụ là tạo ra các tiêu đề của văn bản hay của của trang web.
+- Trong một file html chỉ có duy nhất một thẻ h1.
+- Từ thẻ h2 tới h6 chữ nó sẽ nhỏ dần lại.
+
+### 2. p
+- Thẻ paragraph có công dụng là hiển thị các đoạn văn trong web.
+
+### 3. img
+- Thẻ image dùng để hiển thị hình ảnh.
+- Thuộc tính *src* - source trong thẻ image có công dụng để link hình ảnh vô thẻ image.
+- Thuộc tính *alt* có công dụng chú thích nội dụng của hình ảnh khi ảnh bị lỗi, ảnh bị xóa hoặc đường link bị hỏng khiến cho ảnh không còn được hiển thị, thì phần chú thích trong thuộc tính alt sẽ được hiển thị để thay thế.
+
+### 4. a
+- Thẻ *anchor* có công dụng là neo liên kết, khi nhấn vô thì sẽ được dẫn tới liên kết được neo.
+- Thuộc tính *href* có công dụng là link đường dẫn liên kết.
+
+### 5. ul, li
+- Thẻ *ul* - unordered list dùng để hiển thị các danh sách trong trang web.
+- Ngoài thẻ *ul*, chúng ta có thể sử dụng thẻ ol để thay các dấu chấm trong danh sách thành số thứ tự.
+- Thẻ *li* - list item dùng để hiển thị từng mục trong danh sách thẻ *ul*.
+
+### 6. table
+- Thẻ *table* dùng để hiển thị bảng.
+- Trong thẻ *table*, có 2 thẻ quan trọng cần nhớ là thẻ *thead* và *tbody*. Thẻ *thead* dùng để hiển thị phần đầu (phần tiêu đề) của bảng, còn thẻ *tbody* dùng để hiện thị nội dung của bảng.
+- Trong thẻ *thead*, để định nghĩa dòng tiêu đề chúng ta sẽ sử dụng thẻ *tr*, để định nghĩa nội dung tiêu đề cho bảng chúng ta sẽ dùng thẻ *th*.
+- Trong thẻ *tbody*, chúng ta có thể thêm nội dung vào bảng thẻ *tr*, mỗi thẻ *tr* sẽ tương ứng với một dòng trong bảng, để hiển thị từng nội dung trong một dòng chúng ta sẽ dùng thẻ *td*.
+
+### 7. input
+- Thẻ *input* cho phép chúng ta nhập nội dung vào trang web.
+- Thẻ *input* có rất nhiều type, một số type phổ biển:
+    - *text*: cho phép nhập chữ vào ô input.
+    - *checkbox*: tạo ra các ô check để chúng ta đánh dấu, chức năng của nó là cho phép người dùng chọn nhiều lựa chọn.
+    - *radio*: về chức năng nó cũng khá tương tự với *checkbox*, tuy nhiên về hình dạng nó sẽ là hình tròn thay vì hình vuông như *checkbox*, về mặt chức năng thì chỉ cho phép người dùng chọn 1 lựa chọn duy nhất, và để thực hiện chức năng đó thì các thẻ input type *radio* phải được đặt cùng 1 *name*.
+    ...
+
+### 8. button
+- Thẻ button có công dụng là tạo ra các nút để người dùng có thể nhấn được, có chức năng để nhấn gửi hoặc nhấn submit.
+
+### 9. div
+- Thẻ div có dụng để tạo ra các khối bao quanh các phần tử khác, sẽ giúp ích trong việc css các phần tử bên trong nó.
+
+
+## Attribute trong HTML
+- Attribute hay còn gọi là thuộc tính, có công dụng là thêm các thuộc tính vô trong các thẻ trong html.
+- Với mỗi thẻ trong html có rất nhiều thuộc tính đi kèm theo nó, tùy vào từng mục đích chúng ta sẽ sử dụng các thuộc tính cho phù hợp. Một số thuộc tính thông dụng như: *style*, *onclick*, *title*,...
