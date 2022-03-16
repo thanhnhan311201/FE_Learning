@@ -14,6 +14,8 @@
 1. [CSS Box Model](#css-box-model)
 1. [Background Attributes](#background-attributes)
 1. [Position Attributes](#position-attributes)
+1. [Các cách căn giữa item](#các-cách-căn-giữa-item)
+
 
 # Những kiến thức CSS tổng hợp được trong khóa học **HTML, CSS từ Zero đến Hero**
 
@@ -259,6 +261,7 @@ Trong CSS chúng ta sẽ có 2 nhóm đơn vị: Absolute Units và Relative Uni
 
 - Trong thực tế, dev sẽ thường dùng đơn vị *rem* hơn *em*, vì *rem* dễ kiểm soát vì nó luôn phụ thuộc vào thẻ html. Trong thực tế của des một trang web, dev sẽ cho thẻ html có font-size=100% (16px), sau đó sẽ cho các thẻ khác sử dụng đơn vị *rem* để kế thừa, giúp ích cho việc thay đổi kích thước toàn bộ chữ trong trang web, thường được sử dụng trong kĩ thuật responsive.
 - Các đơn vị *%* rất quan trọng trong việc thiết kế giao diện, vì nó giúp chúng ta phân phối layout một cách hợp lý.
+- Lưu ý về thuộc tính width và height, khi đặt theo *%* sẽ tỉ lệ vào thẻ mà nó phụ thuộc, mặc định là thẻ cha trực tiếp của nó. Vì vậy, thẻ cha của nó phải có kích thước cho width hoặc height thì thẻ con đặt theo *%* mới có tác dụng.
 
 
 ## CSS Functions
@@ -327,7 +330,7 @@ h1::first-letter {
 - *Border* được hiểu là một lớp viền ngoài cùng ôm trọn element được chọn.
 - Khi chúng ta thêm *border* vào element, nó sẽ khiến kích thước tổng thể của element tăng lên, ngoài ra chúng ta có thể style thêm thuộc tính hình dạng và màu cho lớp viền này.
 - Trong thực tế thì người ta sẽ cho kích thước của viền này là 1px.
-- Mặc định kiểu *border* solid (viền liền) sẽ có kích thước mặc định là 2px.
+- Mặc định kiểu *border* solid (viền liền) sẽ có kích thước mặc định là 3px.
 ```
 vd: border: 1px solid #333;
 ```
@@ -392,6 +395,7 @@ background-image: url({đường dẫn hình ảnh});
 ```
 background: no-repeat url("đường dẫn ảnh") center / contain;
 ```
+hoặc
 ```
 background: url("đường dẫn ảnh") no-repeat center / contain;
 ```
@@ -414,3 +418,140 @@ Các thuộc tính position sẽ cho phép chúng ta thiết lập các vị tr�
 - Thuộc tính ít thông dụng, vì nó ít được hỗ trợ nhiều trình duyệt.
 - Nó sẽ không phụ thuộc vào bất kỳ ai, nó sẽ lấy vị trí hiện tại của nó làm gốc.
 - Tuy nhiên có một công năng thú vị, đó là khi chúng ta style thuộc tính top=0, thì khi chúng ta cuộn trang web nếu element đó mà cách top của trình duyệt bằng 0 thì nó sẽ bám dính, nó khá tương đồng với vị trí *fixed*.
+
+## Các cách căn giữa item
+
+### 1. text-align: center
+- Cách sử dụng:
+```
+h1 {
+    text-align: center;
+}
+```
+hoặc
+```
+div .box {
+    background-color: orange;
+    height: 100px;
+    text-align: center;
+}
+
+h1 {
+
+}
+```
+- Thuộc tính *text-align: center;* dùng để căn giữa item theo trục ngang.
+- Đây là thuộc tính có tính thừa kế, cho nên có thể sử dụng trực tiếp vào thẻ con hoặc áp dụng vào thẻ cha để thẻ con thừa kế.
+- Trong trường hợp chỉ có một thẻ con cần căn giữa thì nên dùng thuộc tính này vào trực tiếp thẻ con đó, còn trường hợp có nhiều thẻ con thì nên áp dụng thuộc tính này vào chính thẻ cha chứa các thẻ con đó để các thẻ con được căn giữa.
+
+### 2. line-height
+- Cách sử dụng:
+```
+div .box {
+    background-color: orange;
+    height: 100px;
+}
+
+h1 {
+    line-height: 100px;
+}
+```
+hoặc
+```
+div .box {
+    background-color: orange;
+    height: 100px;
+    line-height: 100px;
+}
+
+h1 {
+
+}
+```
+hoặc
+```
+div .box {
+    --height: 100px;
+    background-color: orange;
+    height: var(--height);
+}
+
+h1 {
+    line-height: var(--height);
+}
+```
+- Thuộc tính *line-height* dùng để thiết lập chiều cao cho dòng của item. Tuy nhiên chúng ta có thể sử dụng thuộc tính này để căn giữa item theo trục dọc bằng cách chúng ta thiết lập thuộc tính *line-height* bằng với chiều cao của thẻ cha chứa item đó.
+- Đây là thuộc tính có tính thừa kế, nên cách sử dụng cũng tương tự như thuộc tính *text-align*.
+
+### 3. Căn giữa với thuộc tính display: flex
+- Cách sử dụng:
+```
+div .box {
+    background-color: orange;
+    height: 100px;
+    display: flex;
+}
+
+h1 {
+    margin: auto;
+}
+```
+hoặc
+```
+div .box {
+    background-color: orange;
+    height: 100px;
+    display: flex;
+    align-item: center;
+    justify-content: center;
+}
+
+h1 {
+
+}
+```
+- Cả 2 cách trên đều được sử dụng để căn giữa các item theo trục dọc và trục ngang.
+- Một điều lưu ý khi sử dụng 2 cách trên để căn giữa các item là bắt buộc phải có thuộc tính *display: flex;*.
+- Đối với cách thứ hai, thuộc tính *align-item: center;* dùng để căn giữa các item theo trục dọc, còn thuộc tính *justify-content: center;* dùng để căn giữa các item theo trục ngang.
+
+### 4. Căn giữa với thuộc tính position
+- Cách sử dụng:
+```
+div .box {
+    background-color: orange;
+    height: 100px;
+    position: relative;
+}
+
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+```
+hoặc
+```
+div .box {
+    background-color: orange;
+    height: 100px;
+    display: flex;
+}
+
+h1 {
+    position: absolute;
+    tmargin: auto;
+}
+
+h1::after {
+    position: absolute;
+    left: -10px;
+    content: "";
+    border-left: 3px solid #333;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+```
+- Trong trường hợp khi chúng ta không thể sử dụng các cách ở trên để căn giữa item, thì chúng ta có thể sử dụng thuộc tính *position* để căn giữa item.
+- Để hiểu thêm cách sử dụng thuộc tính *position* để căn giữa item, vui lòng tham khảo thêm tại: [Căn giữa item với thuộc tính position](https://youtu.be/I2-m_kWZp_Y?t=364)

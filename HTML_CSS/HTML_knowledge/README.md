@@ -71,6 +71,8 @@
 ### 15. div
 - Thẻ div có dụng để tạo ra các khối bao quanh các phần tử khác, sẽ giúp ích trong việc css các phần tử bên trong nó.
 
+**Tham khảo thêm tại:** https://fullstack.edu.vn/blog/tim-hieu-ve-html-va-css.html
+
 
 ## Attribute trong HTML
 - Attribute hay còn gọi là thuộc tính, có công dụng là thêm các thuộc tính vô trong các thẻ trong html.
